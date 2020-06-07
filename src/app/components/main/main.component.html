@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="server-status">
+    <span>Server Status: </span><span [style.color]="isServerAvailable ? 'green' : 'red'">•</span>
+  </div>
+
+  <span class="title">Cocktail Shaker Sort</span>
+
+  <mat-icon (click)="downloadFile()">cloud_download</mat-icon>
+  <mat-icon (click)="fileInput.click()">cloud_upload</mat-icon>
+
+  <input #fileInput type="file" (click)="fileInput.value = null" (change)="uploadFile($event)">
+
+  <div class="spinner" *ngIf="!isResponseReceived">
+    <mat-spinner color="accent" [diameter]="25"></mat-spinner>
+  </div>
+
+  <div class="time-elapsed" *ngIf="timeElapsed">
+    <span>Time elapsed: {{timeElapsed}} ms</span>
+  </div>
+
+  <span class="requirements">
+    Please press <mat-icon>cloud_download</mat-icon> to generate and download file which contains unsorted list of integers<br>
+    Please press <mat-icon>cloud_upload</mat-icon> and select file to sort
+  </span>
+</div>

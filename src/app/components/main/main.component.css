@@ -1,0 +1,43 @@
+.container {
+  font-family: "HelveticaNeueLT Std Thin";
+  font-size: 250%;
+  font-weight: bold;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.server-status {
+  font-size: 75%;
+  text-align: right;
+}
+
+.title {
+  display: block;
+  padding-bottom: 20px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}
+
+.time-elapsed {
+  font-size: 75%;
+}
+
+.requirements {
+  display: block;
+  padding-top: 20px;
+  font-size: 75%;
+  color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+input {
+  display: none;
+}
+
+mat-icon {
+  padding: 10px;
+  cursor: pointer;
+}
